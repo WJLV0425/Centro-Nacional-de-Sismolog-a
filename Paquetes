@@ -1,0 +1,13 @@
+Paquetes a instalar para ciencia de datos y uso de GIS.
+
+Vegan
+Vegetarian
+sf
+ggplot2
+tmap
+sp
+rgdal
+GISTools
+maptools
+RColorBrewer
+
