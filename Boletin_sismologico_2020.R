@@ -21,6 +21,8 @@ library(readr)
 Sismos2020 <- read_csv("Sismos2020.csv")
 View(Sismos2020)
 
+# En QGIS fue utilizada la herramienta clip (Toolbox -> Vector overlay -> Clip), para extraer los sismos que tuvieron lugar sobre la superficie del territorio dominicano.
+
 
 
 
