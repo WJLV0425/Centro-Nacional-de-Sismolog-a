@@ -24,10 +24,14 @@ View(Sismos2020)
 # En QGIS fue utilizada la herramienta clip (cortar) (Toolbox -> Vector overlay -> Clip), para extraer los sismos que tuvieron lugar sobre la superficie del territorio dominicano.
 # Fue utilizado el proceso "sumar longitud de líneas" para sumar todas las fallas acorde  los polígonos en que se encuentran contenidas, luego fueron creadas y adjuntadas las columnas "Distancia (lenght) y cantidad de fallas" a la informaciñon contenida en la matriz de atributos de la capa "PROVCenso2010", creando la capa "SFP". Por último, fue sumada la información de los sismos sucedidos en tierra firme dominicana para el año 2020 a la capa "SFP", mediante el proceso `Unir atributos por localización`. (Se puede acceder a los procesos de forma directa a través de la caja de herramientas de procesos).
 
-#Proceso 1:  Barra superior -> Vectorial -> Herramientas de análisis -> Sumar longitud de líneas. (Insertar imagen proceso1)
+#Proceso 1:  Barra superior -> Vectorial -> Herramientas de análisis -> Sumar longitud de líneas. (Insertar imagen proceso1).
 
-#Proceso 2: Barra superior -> Vectorial -> Herramientas de gesión de datos -> Unir atributos por localización. (Insertar imagen proceso2)
+#Proceso 2: Barra superior -> Vectorial -> Herramientas de gesión de datos -> Unir atributos por localización. (Insertar imagen proceso2).
 
+#Proceso 3 (contar puntos por polígono): Barra superior -> Vectorial -> Herramientas de análisis -> Contar puntos en un polígono.
 
+# Para realizar cambios en la tabla de atributos (convertir distancias m a km, por ejemplo): Caja de herramientas de procesos -> Tabla vectorial -> Caluculadora de campos.
+
+#Para realizar cambios de cualquier tipo a la tabla de atributos, ir a "Tabla Vectorial" en la caja de herramientas (QGIS).
 
 
