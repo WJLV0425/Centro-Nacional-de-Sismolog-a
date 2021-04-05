@@ -1,8 +1,29 @@
----
-title: "República Dominicana: boletín Sismológico, año 2020"
-author: "Welifer Junior Lebron Vicente"
-date: "31/3/2021"
-output: pdf_document
+--- 
+title: "Assessing and supporting working memory in children: the role of attention and the environment"
+subtitle: "Edward David John Berry"
+author: 
+- "Submitted in accordance with the requirements for the degree of Doctor of Philosophy"
+- "University of Leeds" 
+- "School of Psychology"
+date: "September 2017"
+output: 
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+    keep_tex: yes
+    latex_engine: xelatex
+    citation_package: natbib
+fontsize: 12pt
+linestretch: 1.5
+toc-depth: 1
+secnumdepth: 1
+lof: True
+lot: True
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [packages.bib, papers.bib]
+biblio-style: apalike
+geometry: "left=4cm, right=3cm, top=2.5cm, bottom=2.5cm"
 ---
 
 ```{r setup, include=FALSE}

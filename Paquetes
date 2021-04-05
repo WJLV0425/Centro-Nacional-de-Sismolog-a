@@ -1,4 +1,13 @@
-Paquetes a instalar para ciencia de datos y uso de GIS.
+*Paquetes instalados*
+
+Bookdown
+tinytext
+vegan
+
+
+
+
+*Paquetes a instalar para ciencia de datos y uso de GIS*.
 
 Vegan
 Vegetarian
@@ -10,4 +19,4 @@ rgdal
 GISTools
 maptools
 RColorBrewer
-
+tidyverse

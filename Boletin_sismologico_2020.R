@@ -35,3 +35,39 @@ View(Sismos2020)
 #Para realizar cambios de cualquier tipo a la tabla de atributos, ir a "Tabla Vectorial" en la caja de herramientas (QGIS).
 
 
+
+#Instalando rmarkdown y lo necesario para bregar documentos en PDF::
+
+
+install.packages('rmarkdown')
+install.packages('tinytex')
+tinytex::install_tinytex()  # install TinyTeX
+rmarkdown::pandoc_version()
+
+#Un doc Rmarkdown está compuesto por metadata (YAML), código y texto. La metadata va dentro de tres barras ``----``.  https://bookdown.org/yihui/bookdown/r-markdown.html #Para más info, compa.
+
+
+
+# Para subir archivos de gran tamaño a github. "El Tali recomienda usar otra plataforma".
+#1) Descargar e instalar la extension de comandos Git desde https://git-lfs.github.com/
+
+
+
+Correr en la consola de Git:
+  
+git lfs install #Para actualizar mi cuenta.
+git lfs track "*.tipo de archivo (KML, SHAPEFILE, gpkg, etc" #Para seleccionar en cada uno de los repositorios en que quiero utilizar Git Large Files Storage (LFS) para trabajar un archivo.
+
+git add .gitattributes #Para asegurarse de que git LFS está en cadena 
+
+#Para eliminar el último commit lioso sin afectar los demás.
+
+git reset --soft HEAD~1 #Para eliminar el commit lioso sin afectar los posteriores a este.
+git revert HEAD # Para devolver la cuestión si ya hemos realizado push.
+git reset --hard HEAD~1 #Para eliminar el commit pendiente y todos los posteriores.
+
+
+
+
+
+
