@@ -68,6 +68,3 @@ git reset --hard HEAD~1 #Para eliminar el commit pendiente y todos los posterior
 
 
 
-
-
-
