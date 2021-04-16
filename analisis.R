@@ -1,17 +1,7 @@
 #Cargar paquetes
+#Ver función ipak (para cargar e instalar multiples paquetes a la vez) y objeto data_science en "Paquetes_ds.R".
 
 ipak(data_science)
-library(dplyr) #Para manipular el data.frame.
-install.packages("vegan")
-library(vegan)
-library(sf)
-library(tidyverse)
-library(sf)
-library(rgdal)
-library(maptools)
-library(tmap)
-library(GISTools)
-library(RColorBrewer)
 
 #Leer archivo de excel, csv, etc.
 
@@ -40,11 +30,13 @@ s2020 = read.csv("material_base/Sismos2020.csv", stringsAsFactors = FALSE)
 coordinates (s2020) = c("Longitud", "Latitud")
 str(s2020) 
 
-#Para leer archivo geoespacial
+#Para leer archivo geoespacial.
 
 RD = readOGR("C:/Users/wjlv0425.MSI/OneDrive/Documentos/ShapeFilesCenso2010", "PROVCenso2010", encoding = "UTF-8")
 str(s2020)
 str(RD)
+
+st20 = readOGR("sf/st20.gpkg", coordinates("Longitud", "Latitud"), encoding = "UTF-8")
 
 #Bregando el mapa con rgdal.
 
@@ -63,7 +55,7 @@ tm_shape(RD) + #shapefile usado.
   tm_compass() + # This puts a compass on the bottom right of the map 
   tmap_style("white") + #Supongo que este estilo es lo que proporciona los colores del mapa, por lo que es necesario buscar otros estilos.
   tm_layout(legend.outside = TRUE) +
-  tmap_options(max.categories = 33) + tm_polygons("pop_est") + tm_shape(s2020) + tm_bubbles("Mc")
+  tmap_options(max.categories = 33) + tm_polygons("pop_est") + tm_shape() + tm_bubbles("Mc")
 
 
 plot(RD)

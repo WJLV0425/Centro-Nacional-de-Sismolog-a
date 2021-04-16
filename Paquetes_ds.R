@@ -16,7 +16,7 @@ ipak <- function(pkg){
 
 # Creamos una variable con el listado de paquetes que llamaremos packages.
 
-data_science = c("vegan", "sf","ggplot2", "tmap", "rgdal", "GISTools", "maptools", "RColorBrewer","tidyverse")
+data_science = c("vegan", "sf","ggplot2", "tmap", "rgdal", "GISTools", "maptools", "RColorBrewer","tidyverse", "dplyr")
 
 ipak(data_science)
 
