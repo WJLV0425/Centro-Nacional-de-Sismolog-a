@@ -15,15 +15,15 @@ library(RColorBrewer)
 
 #Leer archivo de excel, csv, etc.
 
-readr::read_csv ("sismos2020.csv") #para obtener info sobre el archivo.
-sismos2020 = read.csv("sismos2020.csv")
+readr::read_csv ("material_base/Sismos2020.csv") #para obtener info sobre el archivo.
+sismos2020 = read.csv("material_base/Sismos2020.csv")
 View(sismos2020)
 
+#Lo que JR me envió.
+jrs2020 <- read_fwf('material_base/sismos2020-.-.txt', fwf_widths(c(11, 11, 8, 10, 6, 4), col_names = c('Fecha', 'Hora', 'Latitud', 'Longitud', 'Prof', 'Mc')), skip = 1)
+jrs2020_sf <- jrs2020 %>% st_as_sf(coords=c('Longitud', 'Latitud'), crs = 4326)
 
-d <- read_fwf('Sismos2020.csv', fwf_widths(c(11, 11, 8, 10, 6, 4), col_names = c('fecha', 'hora', 'latitud', 'longitud', 'prof', 'mc')), skip = 1)
-d_sf <- d %>% st_as_sf(coords=c('longitud', 'latitud'), crs = 4326)
-
-plot(d_sf)
+plot(jrs2020_sf)
 
 #Empleo de tydiverse para análisis de datos.
 
@@ -34,7 +34,7 @@ class(sismos2020)
 
 #Convertir data.frame en objeto `sf` "simple feature" para realizar análisis espacial.
 
-s2020 = read.csv("sismos2020.csv", stringsAsFactors = FALSE) 
+s2020 = read.csv("material_base/Sismos2020.csv", stringsAsFactors = FALSE) 
 
 #Para convertir data.frame en objeto espacial.
 coordinates (s2020) = c("Longitud", "Latitud")
